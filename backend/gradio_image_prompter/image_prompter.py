@@ -116,12 +116,14 @@ class ImagePrompter(gradio.Image):
         )
 
     def preprocess(self, x: PromptData) -> PromptValue | None:
+        #print("preprocess input: " + str(x))
         if x is None:
             return x
         im = super().preprocess(x.image)
         return {"image": im, "points": x.points}
 
     def postprocess(self, y: PromptValue) -> PromptData | None:
+        #print("postprocess input: " + str(y))
         if y is None:
             return None
         image, points = y.get("image", None), y.get("points", [])
