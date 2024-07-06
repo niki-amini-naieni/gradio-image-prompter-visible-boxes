@@ -160,7 +160,7 @@
 
   function draw_boxes(boxes: Array<Array<number>>) {
     if (!ctx) return;
-    ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.fillStyle = "rgba(0, 255, 255, 0.3)";
     ctx.beginPath();
     boxes.forEach((box: Array<number>) => {
       if (box[0] != box[2] && box[1] != box[3]) {
